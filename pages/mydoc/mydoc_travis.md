@@ -1,12 +1,12 @@
 ---
-title: Pages
+title: Travis CI 사용법
 tags: [getting_started, formatting, content_types]
 keywords: pages, authoring, exclusion, frontmatter
 last_updated: July 16, 2016
-summary: "This theme primarily uses pages. You need to make sure your pages have the appropriate frontmatter. One frontmatter tag your users might find helpful is the summary tag. This functions similar in purpose to the shortdesc element in DITA."
+summary: "Travis CI 사용법에 대한 문서"
 sidebar: mydoc_sidebar
-permalink: mydoc_pages.html
+permalink: mydoc_travis.html
 folder: mydoc
 ---
 
-## Where to author content
+## Travis CI 사용법
