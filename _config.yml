@@ -9,13 +9,13 @@ topnav_title: 성신여대 git/github/travis 실습
 site_title: Jekyll theme for documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Your company
+company_name: Sungshin Univ. 
 # this appears in the footer
 
 github_editme_path: oss-sungshin/git-lecture/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-disqus_shortname: idrbwjekyll
+disqus_shortname: sungshin 
 # if you're using disqus for comments, add the shortname here. if not, leave this value blank.
 
 host: 127.0.0.1
