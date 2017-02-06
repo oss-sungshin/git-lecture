@@ -1,5 +1,5 @@
 ---
-title: 성신여대 오픈소스 툴 실습
+title: 성신여대 오픈소스 팀 프로젝트 실습
 keywords: 
 tags: [getting_started]
 sidebar: mydoc_sidebar
@@ -7,142 +7,50 @@ permalink: index.html
 summary: 실습 방법. 
 ---
 
-## Build the Theme
+## 목표
+* Webpage 문서를 프로젝트화 하여 서로 협업하면서 작업을 진행.
+* Markdown 문서 작업을 통해 git/github 사용법을 완벽 숙지한다. 
+
+## 사용 언어
+* 개발 프로젝트가 아닌 관계로 모든 작업은 Markdown을 기반으로 작성.
+* Markdown 사용방법은 아래 사이트를 참고하세요.
+
+https://guides.github.com/features/mastering-markdown/
+
+## 실습 진행 방법
+* 모든 실습자들은 사이트 xxx의 내용을 수정하면서 발생되는 문제를 2명의 강사와 함께 
+해결한다.
+* 실습 진행 도중 여러 이벤트(브랜치 작업, 개발 도중 머지) 들의 미션이 발생되며, 강사와 
+함께 문제점을 같이 해결한다.
 
 
-## Sidebar syntax
+## 2월 9일(목)시간표
 
-The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme. For example:
+* 10:00 ~ 11:50 : 실습 진행 방법 설명, 팀 빌딩, 실습 진행
+* 11:00 : 브랜치 후 작업 진행 (강사 개별 지도)
+* Event #1(11:20) : 1차 머지(팀원 push -> 팀장 pull request -> 서버)
+    * 개별 브랜치 및 머지 충돌을 실습한다.  
+* Event #2(15:10) : 2차 머지(팀원 push -> 팀장 pull request -> 서버)
+    * Stash 사용 방법을 실습한다.
+* Event #3(16:00) : 커밋 가져오기
+    * 최근 patch 파일 1개를 추출 후 각 팀에 전달(git format-patch -1)
+    * 최근 oss-sungshin 커밋을 팀장 github 저장소에 적용하기(git cherry-pick)
+* Event #4(16:30) : 팀별 커및 내용 공유 및 설명(강사 진행)
+    * 내용 공유
 
-
-Each `folder` or `subfolder` must contain a `title` and `output` property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
-
-The two outputs available are `web` and `pdf`. (Even if you aren't publishing PDF, you still need to specify `output: web`).
-
-The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial](mydoc_yaml_tutorial) for more details about how YAML works.
-
-To accommodate the title page and table of contents in PDF outputs, each product sidebar must list these pages before any other:
-
-```yaml
-- title:
-  output: pdf
-  type: frontmatter
-  folderitems:
-  - title:
-    url: /titlepage
-    output: pdf
-    type: frontmatter
-  - title:
-    url: /tocpage
-    output: pdf
-    type: frontmatter
-```
-
-Leave the output as `output: pdf` for these frontmatter pages so that they don't appear in the web output.
-
-For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigation] and [YAML tutorial][mydoc_yaml_tutorial].
-
-## Relative links and offline viewing
-
-
-## Page frontmatter
-
-When you write pages, include these same frontmatter properties with each page:
-
-```yaml
----
-title: "Some title"
-tags: [sample1, sample2]
-keywords: keyword1, keyword2, keyword3
-last_updated: Month day, year
-summary: "optional summary here"
-sidebar: sidebarname
-permalink: filename.html
----
-```
-
-(You will customize the values for each of these properties, of course.)
-
-For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash `\`.
-
-Values for `keywords` get populated into the metadata of the page for SEO.
-
-Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won't auto-create these tag files.)
-
-If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
-
-The `permalink` value should be the same as your filename and include the ".html" file extension.
-
-For more detail, see [Pages][mydoc_pages].
-
-## Where to store your documentation topics
-
-You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the \_pages directory. Inside \_pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.
-
-Note that product1, product2, and mydoc are all just sample content to demonstrate how to add multiple products into the theme. You can freely delete that content.
-
-For more information, see [Pages][mydoc_pages] and [Posts][mydoc_posts].
-
-## Configure the top navigation
-
-The top navigation bar's menu items are set through the \_data/topnav.yml file. Use the top navigation bar to provide links for navigating from one product to another, or to navigate to external resources.
-
-For external URLs, use `external_url` in the item property, as shown in the example topnav.yml file. For internal links, use `url` the same was you do in the sidebar data files.
-
-Note that the topnav has two sections: `topnav` and `topnav_dropdowns`. The topnav section contains single links, while the `topnav_dropdowns` section contains dropdown menus. The two sections are independent of each other.
-
-## Generating PDF
-
-If you want to generate PDF, you'll need a license for [Prince XML](http://www.princexml.com/). You will also need to [install Prince](http://www.princexml.com/doc/installing/).  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page, and you're supposed to buy the license to use it.
-
-If you're on Windows, install [Git Bash client](https://git-for-windows.github.io/) rather than using the default Windows command prompt.
-
-Open up the css/printstyles.css file and customize the email address (`youremail@domain.com`) that is listed there. This email address appears in the bottom left footer of the PDF output. You'll also need to create a PDF configuration file following the examples shown in the pdfconfigs folder, and also customize some build scripts following the same pattern shown in the root: pdf-product1.sh
-
-See the section on [Generating PDFs][mydoc_generating_pdfs] for more details about setting the theme up for this output.
-
-## Blogs / News
-
-For blog posts, create your markdown files in the \_posts folder following the sample formats. Post file names always begin with the date (YYYY-MM-DD-title).
-
-The news/news.html file displays the posts, and the news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.
-
-See [Posts][mydoc_posts] for more information.
-
-## Markdown
-
-This theme uses [kramdown markdown](http://kramdown.gettalong.org/). kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
-
-```
-1.  First item
-2.  Second item
-3.  Third item
-```
-
-When you want to insert paragraphs, notes, code snippets, or other matter in between the list items, use four spaces to indent. The four spaces will line up with the first letter of the list item (the <b>F</b>irst or <b>S</b>econd or <b>T</b>hird).
-
-```
-1.  First item
-
-    ```
-    alert("hello");
-    ```
-
-2.  Second item
-
-    Some pig!
-
-3.  Third item
-```
-
-See the topics under "Formatting" in the sidebar for more information.
-
-## Automated links
-
-If you want to use an automated system for managing links, see [Automated Links][mydoc_hyperlinks.html#automatedlinks]. This approach automatically creates a list of Markdown references to simplify linking.
-
-## Other instructions
-
-The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.
-
-{% include links.html %}
+## 2월 10일(금) 시간표
+* 13:00 ~ 15:50 : 실습 진행 및 시상
+* Event #5(13:20) : 4차 머지(팀원 push -> 팀장 pull request -> 서버)
+    * 머지 문제 해결
+* Event #5(14:00) : reset 실습
+    1. 현재 커밋 백업  (git format-patch -2)
+    2. 과거 커밋으로 이동 (git reset XXXXX)
+    3. 백업 커밋 적용  (git am 이용)
+* Event #5(15:00) : 최종 머지 및 작업 내용 발표
+    * 작업 한 내용 서로 공유
+* Event #5(15:30) : 종합 및 시상식
+ 
+ 
+## 팀별 결과 공유 및 시상
+최종 결과물은 아래 페이지에 영구 보존되며,
+우수 팀은 팀별 경품이 있습니다.
