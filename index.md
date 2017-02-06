@@ -13,6 +13,9 @@ summary: 실습 방법.
 * Webpage 문서를 프로젝트화 하여 서로 협업하면서 작업을 진행.
 * Markdown 문서 작업을 통해 git/github 사용법을 완벽 숙지한다. 
 
+## PDF 문서
+* [다운로드 클릭](https://github.com/oss-sungshin/git-lecture/raw/master/pdf/mydoc.pdf)
+
 ## 사용 언어
 * 개발 프로젝트가 아닌 관계로 모든 작업은 Markdown을 기반으로 작성.
 * Markdown 사용방법은 아래 사이트를 참고하세요.
