@@ -1,0 +1,24 @@
+language: ruby
+
+# Ubuntu 14.04 LTS
+dist: trusty
+
+sudo: required
+
+install:
+ - sudo apt-get -qq update
+ - sudo apt-get -y  install gdebi
+ - wget https://www.princexml.com/download/prince_11-1_ubuntu16.04_amd64.deb
+ - sudo gdebi prince_11-1_ubuntu16.04_amd64.deb
+
+
+script: 
+ - echo 'Killing all Jekyll instances'
+ - kill -9 $(ps aux | grep '[j]ekyll' | awk '{print [}')
+ - echo "Building PDF-friendly HTML site for Mydoc ...";
+ - bundle exec jekyll serve --detach --config _config.yml<Plug>PeepOpendfconfigs/config_mydoc_pdf.yml;
+ - echo "done";
+ - echo "Building the PDF ...";
+ - prince --javascript --input-list=_site/pdfconfigs/prince-list.txt -o pdf/mydoc.pdf;
+ - echo "done";]
+
