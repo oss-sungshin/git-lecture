@@ -30,7 +30,11 @@ entries:
     - title: About Ruby, Gems, Bundler, etc.
       url: /mydoc_about_ruby_gems_etc.html
       output: web, pdf
-
+      
+    - title: Create.
+      url: /mydoc_about_ruby_gems_etc.html
+      output: web, pdf
+      
   - title: github 사용법
     output: web, pdf법
 
