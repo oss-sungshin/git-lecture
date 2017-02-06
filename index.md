@@ -1,10 +1,10 @@
 ---
-title: 성신여대 오픈소스 툴 강의
+title: 성신여대 오픈소스 툴 실습
 keywords: 
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
-summary: 한글을 테스트 합니다. 
+summary: 실습 방법. 
 ---
 
 ## Build the Theme
@@ -14,50 +14,6 @@ summary: 한글을 테스트 합니다.
 
 The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme. For example:
 
-```yaml
-entries:
-- title: sidebar
-  product: Jekyll Doc Theme
-  version: 6.0
-  folders:
-
-  - title: Overview
-    output: web, pdf
-    folderitems:
-
-    - title: Get started
-      url: /index.html
-      output: web, pdf
-
-    - title: Introduction
-      url: /mydoc_introduction.html
-      output: web, pdf
-
-    - title: Supported features
-      url: /mydoc_supported_features.html
-      output: web, pdf
-
-    - title: About the theme author
-      url: /mydoc_about.html
-      output: web, pdf
-
-    - title: Support
-      url: /mydoc_support.html
-      output: web, pdf
-
-  - title: Release Notes
-    output: web, pdf
-    folderitems:
-
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
-      output: web, pdf
-
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
-      output: web, pdf
-
-```
 
 Each `folder` or `subfolder` must contain a `title` and `output` property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
 

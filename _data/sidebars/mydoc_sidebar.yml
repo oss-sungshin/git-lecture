@@ -6,31 +6,22 @@ entries:
   version: 1.0
   folders:
 
-  - title: 홈페이지 수정방법
+  - title: 강의 노트
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: 실습 방법
       url: /index.html
       output: web, pdf
       type: homepage
 
-    - title: Introduction
+    - title: 팀 빌딩 방법 및 결과
+      url: /mydoc_teambuilding.html
+      output: web, pdf
+
+    - title: 문서 구조
       url: /mydoc_introduction.html
       output: web, pdf
-
-    - title: Supported features
-      url: /mydoc_supported_features.html
-      output: web, pdf
-
-    - title: About the theme author
-      url: /mydoc_about.html
-      output: web, pdf
-
-    - title: Support
-      url: /mydoc_support.html
-      output: web, pdf
-
 
   - title: git 사용
     output: web, pdf
@@ -38,14 +29,6 @@ entries:
 
     - title: About Ruby, Gems, Bundler, etc.
       url: /mydoc_about_ruby_gems_etc.html
-      output: web, pdf
-
-    - title: Install Jekyll on Mac
-      url: /mydoc_install_jekyll_on_mac.html
-      output: web, pdf
-
-    - title: Install Jekyll on Windows
-      url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
 
   - title: github 사용법
@@ -56,52 +39,12 @@ entries:
       url: /mydoc_pages.html
       output: web, pdf
 
-    - title: Posts
-      url: /mydoc_posts.html
-      output: web, pdf
-
-    - title: Lists
-      url: /mydoc_lists.html
-      output: web, pdf
-
-    - title: Conditional logic
-      url: /mydoc_conditional_logic.html
-      output: web, pdf
-
-    - title: Content reuse
-      url: /mydoc_content_reuse.html
-      output: web, pdf
-
-    - title: Collections
-      url: /mydoc_collections.html
-      output: web, pdf
-
-    - title: WebStorm editor tips
-      url: /mydoc_webstorm_text_editor.html
-      output: web, pdf
-
-    - title: Atom editor tips
-      url: /mydoc_atom_text_editor.html
-      output: web, pdf
-
   - title: Travis CI 사용법
     output: web, pdf
 
     folderitems:
     - title: Sidebar navigation
       url: /mydoc_sidebar_navigation.html
-      output: web, pdf
-
-    - title: YAML tutorial in the context of Jekyll
-      url: /mydoc_yaml_tutorial.html
-      output: web, pdf
-
-    - title: Tags
-      url: /mydoc_tags.html
-      output: web, pdf
-
-    - title: Series
-      url: /mydoc_series.html
       output: web, pdf
 
   - title: Release notes
@@ -111,7 +54,3 @@ entries:
     - title: 6.0 Release notes
       url: /mydoc_release_notes_60.html
       output: web, pdf
-
-
-
-#
