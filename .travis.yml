@@ -7,10 +7,6 @@ sudo: required
 
 install:
  - sudo apt-get -qq update
- - sudo apt-get -y  install gdebi
- - wget https://www.princexml.com/download/prince_11-1_ubuntu16.04_amd64.deb
- - sudo gdebi prince_11-1_ubuntu16.04_amd64.deb
-
 
 script: 
  - echo 'Killing all Jekyll instances'
