@@ -6,7 +6,7 @@ dist: trusty
 sudo: required
 
 install:
- - sudo apt-get -qq update
+
 
 script: 
  - echo 'Killing all Jekyll instances'
