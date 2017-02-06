@@ -1,9 +1,9 @@
-repository: 성신여대 Git 강의
+repository: 성신여대 Git 실습
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: 성신여대 git 사용법
+topnav_title: 성신여대 git/github/travis 실습
 # this appears on the top navigation bar next to the home button
 
 site_title: Jekyll theme for documentation
@@ -12,7 +12,7 @@ site_title: Jekyll theme for documentation
 company_name: Your company
 # this appears in the footer
 
-github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/
+github_editme_path: oss-sungshin/git-lecture/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: idrbwjekyll
@@ -32,7 +32,7 @@ exclude:
 
 feedback_subject_line: Jekyll documentation theme
 
-feedback_email: tomjohnson1492@gmail.com
+feedback_email: joohyun0115@kookmin.ac.kr
 # used as a contact email for the Feedback link in the top navigation bar
 
 # feedback_disable: true
@@ -62,42 +62,11 @@ collections:
 # collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
 
 defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      sidebar: home_sidebar
-  -
-    scope:
-      path: ""
-      type: "tooltips"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      tooltip: true
-
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
-      search: true
-      sidebar: home_sidebar
 
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- home_sidebar
 - mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
 - other
 
 description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
