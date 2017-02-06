@@ -7,6 +7,7 @@ sudo: required
 
 install:
 
+
 script: 
  - echo 'Killing all Jekyll instances'
  - kill -9 $(ps aux | grep '[j]ekyll' | awk '{print [}')
