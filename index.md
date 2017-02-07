@@ -7,7 +7,7 @@ permalink: index.html
 summary: 실습 방법. 
 ---
 
-![sungshin](/images/sungshin.png)
+![sungshin](./images/sungshin.png)
 
 ## 목표
 * Webpage 문서를 프로젝트화 하여 서로 협업하면서 작업을 진행.
