@@ -4,14 +4,14 @@ keywords:
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
-summary: 실습 방법. 
+summary: Web 페이지를 프로젝트화 하여 서로 협업하면서 작업을 진행, 웹 프로젝트 소스를 서로 수정함으로 발생되는 문제를 강사와 함께 해결한다. 
 ---
 
 ![sungshin](./images/sungshin.png)
 
 ## 목표
-* Webpage 문서를 프로젝트화 하여 서로 협업하면서 작업을 진행.
-* Markdown 문서 작업을 통해 git/github 사용법을 완벽 숙지한다. 
+* Webpage 프로젝트를 서로 협업하면서 작업을 진행.
+* Markdown으로 구성된 페이지 수정 작업을 통해 git/github 사용법을 완벽 숙지한다. 
 
 ## PDF 문서
 * [다운로드 클릭](https://github.com/oss-sungshin/git-lecture/raw/master/pdf/mydoc.pdf)
@@ -19,15 +19,17 @@ summary: 실습 방법.
 ## 사용 언어
 * 개발 프로젝트가 아닌 관계로 모든 작업은 Markdown을 기반으로 작성.
 * Markdown 사용방법은 아래 사이트를 참고하세요.
-
-https://guides.github.com/features/mastering-markdown/
+* <https://guides.github.com/features/mastering-markdown>
+* Markdown viwer 활용 <https://jbt.github.io/markdown-editor/>
 
 ## 실습 진행 방법
-* 모든 실습자들은 사이트 xxx의 내용을 수정하면서 발생되는 문제를 2명의 강사와 함께 
+* 모든 실습자들은 웹 프로젝트(<https://github.com/oss-sungshin/git-lecture>)의 소스를 수정하면서 발생되는 문제를 2명의 강사와 함께 
 해결한다.
 * 실습 진행 도중 여러 이벤트(브랜치 작업, 개발 도중 머지) 들의 미션이 발생되며, 강사와 
 함께 문제점을 같이 해결한다.
 
+## Git 내용 참고 사이트 
+* <https://git-scm.com/book/ko/v1>
 
 ## 2월 9일(목)시간표
 
@@ -55,9 +57,19 @@ https://guides.github.com/features/mastering-markdown/
     * 작업 한 내용 서로 공유
 * Event #5(15:30) : 종합 및 시상식
  
- 
+## 팀장이 해야 할 일
+* 자신의 github에 oss-sungshin 프로젝트 fork 하기 
+![git_fork](./images/git_fork.svg)
+* 팀원 github 계정을 프로젝트에 등록하기
+![git_colla](./images/git_colla.svg)
+* 통합은 pull request를 사용하여 병합 할 예정
+
+    
+## 팀원이 해야 할 일
+* 팀장의 github 프로젝트를 local PC에 clone 하기
+![git_clone2](./images/git_clone.svg)
+
 ## 팀별 결과 공유 및 시상
 최종 결과물은 아래 페이지에 영구 보존되며,
 우수 팀은 팀별 경품이 있습니다.
-
 
