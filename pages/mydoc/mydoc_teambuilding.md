@@ -19,5 +19,4 @@ C | name, name, name, name and name
 D | name, name, name, name and name
 
 
-## Survey of features
 

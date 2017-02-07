@@ -20,7 +20,7 @@ entries:
       output: web, pdf
       type: web, pdf
 
-    - title: 팀 빌딩 방법 및 결과
+    - title: 팀 빌딩 및 github 사용법
       url: /mydoc_teambuilding.html
       output: web, pdf
 
@@ -32,35 +32,35 @@ entries:
     output: web, pdf
     folderitems:
       
-    - title: 1. Create(A, B)
+    - title: 1. Create(A)
       url: /mydoc_git_create.html
       output: web, pdf
       
-    - title: 2. Browse(C, D)
+    - title: 2. Browse(B)
       url: /mydoc_git_browse.html
       output: web, pdf
       
-    - title: 3. Branch(A, C)
+    - title: 3. Branch(C)
       url: /mydoc_git_branch.html
       output: web, pdf
       
-    - title: 4. Track files:(B, D)
+    - title: 4. Track files:(D)
       url: /mydoc_git_track_files.html
       output: web, pdf
       
-    - title: 5. Record(A, D)
+    - title: 5. Record(D)
       url: /mydoc_git_record.html
       output: web, pdf
       
-    - title: 6. Revert(B, C)
+    - title: 6. Revert(C)
       url: /mydoc_git_revert.html
       output: web, pdf
       
-    - title: 7. Publish(A, B)
+    - title: 7. Publish(B)
       url: /mydoc_git_publish.html
       output: web, pdf
       
-    - title: 8. Update(C, D)
+    - title: 8. Update(A)
       url: /mydoc_git_update.html
       output: web, pdf
       
