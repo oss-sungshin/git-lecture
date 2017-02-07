@@ -31,13 +31,45 @@ entries:
   - title: git 사용
     output: web, pdf
     folderitems:
-
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
+      
+    - title: 1. Create(A, B)
+      url: /mydoc_git_create.html
       output: web, pdf
       
-    - title: Create.
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: 2. Browse(C, D)
+      url: /mydoc_git_browse.html
+      output: web, pdf
+      
+    - title: 3. Branch(A, C)
+      url: /mydoc_git_branch.html
+      output: web, pdf
+      
+    - title: 4. Track files:(B, D)
+      url: /mydoc_git_track_files.html
+      output: web, pdf
+      
+    - title: 5. Record(A, D)
+      url: /mydoc_git_record.html
+      output: web, pdf
+      
+    - title: 6. Revert(B, C)
+      url: /mydoc_git_revert.html
+      output: web, pdf
+      
+    - title: 7. Publish(A, B)
+      url: /mydoc_git_publish.html
+      output: web, pdf
+      
+    - title: 8. Update(C, D)
+      url: /mydoc_git_update.html
+      output: web, pdf
+      
+    - title: 9. Resolve Conflicts(A, B, C, D)
+      url: /mydoc_git_resolve_conflict.html
+      output: web, pdf
+      
+    - title: 10. Useful Commands(A, B, C, D)
+      url: /mydoc_git_useful.html
       output: web, pdf
       
   - title: github 사용법
