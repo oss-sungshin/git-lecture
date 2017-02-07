@@ -5,7 +5,7 @@ permalink: mydoc_introduction.html
 folder: mydoc
 ---
 ## 참고 자료
-![Image of git cheat](../../images/git_cheat.png)
+![Image of git cheat](images/git_cheat.png)
 
 ## 문서구조
 
