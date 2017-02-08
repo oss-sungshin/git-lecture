@@ -15,8 +15,3 @@ team 빌딩 결과
 ------------ | -------------
 A | name, name, name, name and name
 B | name, name, name, name and name
-C | name, name, name, name and name
-D | name, name, name, name and name
-
-
-
