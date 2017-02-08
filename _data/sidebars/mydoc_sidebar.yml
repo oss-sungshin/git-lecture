@@ -40,35 +40,35 @@ entries:
       url: /mydoc_git_browse.html
       output: web, pdf
       
-    - title: 3. Branch(C)
+    - title: 3. Branch(A)
       url: /mydoc_git_branch.html
       output: web, pdf
       
-    - title: 4. Track files:(D)
+    - title: 4. Track files:(B)
       url: /mydoc_git_track_files.html
       output: web, pdf
       
-    - title: 5. Record(D)
+    - title: 5. Record(A)
       url: /mydoc_git_record.html
       output: web, pdf
       
-    - title: 6. Revert(C)
+    - title: 6. Revert(B)
       url: /mydoc_git_revert.html
       output: web, pdf
       
-    - title: 7. Publish(B)
+    - title: 7. Publish(A)
       url: /mydoc_git_publish.html
       output: web, pdf
       
-    - title: 8. Update(A)
+    - title: 8. Update(B)
       url: /mydoc_git_update.html
       output: web, pdf
       
-    - title: 9. Resolve Conflicts(A, B, C, D)
+    - title: 9. Resolve Conflicts(A, B)
       url: /mydoc_git_resolve_conflict.html
       output: web, pdf
       
-    - title: 10. Useful Commands(A, B, C, D)
+    - title: 10. Useful Commands(A, B)
       url: /mydoc_git_useful.html
       output: web, pdf
       
