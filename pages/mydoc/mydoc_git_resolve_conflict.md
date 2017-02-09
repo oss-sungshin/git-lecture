@@ -8,6 +8,34 @@ permalink: mydoc_git_resolve_conflict.html
 folder: mydoc
 ---
 
+# Reslove Conflicts
+Use add to mark files as resolved.
+
+예시는 아래와 같다.
+
+```
+git diff [--base]
+
+git diff --ours
+
+git diff --theirs
+
+git log --merge
+
+gitk --merge
+```
+
+
+ * git diff는 두 커밋간이나 HEAD와 워킹 디렉토리의 차이점을 보여주는 명령어이다.
+ * git diff 명령어를 사용하면 수정된 라인의 전, 후를 비교할 수 있다.
+ * git diff 명령어는 수정사항이 있을 때 많이 사용한다.
+ * git diff "HEAD...원하는커밋아이디"를 써주면 처음부터 커밋아이디까지의 변경사항을 볼 수 있다.
+ * gitk를 사용하면 지금까지 작업의 히스토리가 보여진다.
+
+gitk 화면 예시
+
+ ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+=======
 ### 고급 Merge
 Git의 Merge은 진짜 가볍다. Git에서는 브랜치끼리 몇 번이고 Merge 하기가 쉽다. 오랫동안 합치지 않은 두 브랜치를 한 번에 Merge 하면 거대한 충돌이 발생한다. 조그마한 충돌을 자주 겪고 그걸 풀어나감으로써 브랜치를 최신으로 유지한다.
 
@@ -321,11 +349,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 #! /usr/bin/env ruby
 
 def hello
-<<<<<<< HEAD
-  puts 'hola world'
-=======
   puts 'hello mundo'
->>>>>>> mundo
 end
 
 hello()
@@ -353,14 +377,10 @@ $ git checkout --conflict=diff3 hello.rb
 #! /usr/bin/env ruby
 
 def hello
-<<<<<<< ours
+
   puts 'hola world'
 ||||||| base
   puts 'hello world'
-=======
-  puts 'hello mundo'
->>>>>>> theirs
-end
 
 hello()
 ```
@@ -706,3 +726,4 @@ $ git diff-tree -p rack_branch
 ```
 $ git diff-tree -p rack_remote/master
 ```
+
