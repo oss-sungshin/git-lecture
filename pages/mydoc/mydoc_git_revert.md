@@ -8,7 +8,7 @@ permalink: mydoc_git_revert.html
 folder: mydoc
 ---
 
-![git](/images/git_mark.jpg)얍
+![git](../../images/git_mark.jpg)
 
 # git revert
  
@@ -183,4 +183,4 @@ git checkout -- [file] 명령은 꽤 위험한 명령이라는 것을 알아야 
 
 Git으로 커밋한 모든 것은 언제나 복구할 수 있다. 삭제한 브랜치에 있었던 것도, --amend 옵션으로 다시 커밋한 것도 복구할 수 있다(자세한 것은 데이터 복구 에서 다룬다). 하지만 커밋하지 않고 잃어버린 것은 절대로 되돌릴 수 없다.  
 
-* 출처:[https://git-scm.com/book/ko/v2/Git의-기초-되돌리기]
+### 출처:[https://git-scm.com/book/ko/v2/Git의-기초-되돌리기]
