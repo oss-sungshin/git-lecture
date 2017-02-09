@@ -1,6 +1,6 @@
 ---
 title: git branch-related command
-tags: [getting_started, troubleshooting]
+tags: [git branch command]
 keywords:
 summary: "Writing git manual"
 sidebar: mydoc_sidebar
@@ -10,3 +10,4 @@ folder: mydoc
 
 ## Writing git manual! 
 Writing git manual! 
+#test

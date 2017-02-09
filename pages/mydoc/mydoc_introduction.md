@@ -7,7 +7,11 @@ folder: mydoc
 ## 참고 자료
 ![Image of git cheat](images/git_cheat.png)
 
+사진이 잘 보이지 않는 경우 마우스 오른쪽 버튼을 이용해서 사진을 저장해서 윈도우즈 사진 뷰어를 통해 열어서 보시면 됩니다.
+
 ## 문서구조
+
+NOTE!: 기본 명령어 및 옵션에 대한 사용법을 예제와 함께 작성해주시면 됩니다. 필요에 따라 검색을 하셔도 좋습니다.
 
 [1. Create](./mydoc_git_create.md): 실제 수정해야할 파일: $(GIT_LECTURE)/pages/mydoc/mydoc_git_create.md
 

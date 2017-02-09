@@ -19,3 +19,6 @@ From remote repository
    git clone git://...
    git clone ssh://...
 ```
+## Writing git manual! 
+Writing git manual! 
+

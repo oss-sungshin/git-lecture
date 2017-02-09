@@ -11,5 +11,9 @@ folder: mydoc
 ## Writing git manual! 
 Writing git manual! 
 
-
 update-related
+
+# Update
+
+![Update] (C:\Users\IT333-8-PC\git-lecture\images\update.jpeg)
+
