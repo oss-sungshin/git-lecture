@@ -31,7 +31,3 @@ gitk --merge
  * git diff 명령어는 수정사항이 있을 때 많이 사용한다.
  * git diff ~ HEAD...원하는커밋아이디 를 써주면 처음부터 커밋아이디까지의 변경사항을 볼 수 있다.
  * gitk를 사용하면 지금까지 작업의 히스토리가 보여진다.
-
-gitk 화면 예시
-
- ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
