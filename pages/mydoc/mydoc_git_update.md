@@ -15,11 +15,14 @@ Writing git manual!
 
 ! [Update](C:\Users\IT333-8-PC\git-lecture\images\update.jpeg)
 
+![git](./images/update.jpg)
+
 ## 공유하고 업데이트하기
 
 Git에는 네트워크가 필요한 명령어가 많지 않다. 거의 로컬 데이터베이스만으로 동작한다. 코드를 공유하거나 가져올 때 필요한 명령어가 몇 개 있다. 이런 명령어는 모두 리모트 저장소를 다루는 명령어다.
 
-git fetch
+* git fetch
+
 git fetch 명령은 로컬 데이터베이스에 있는 것을 뺀 리모트 저장소의 모든 것을 가져온다.
 
 “리모트 저장소를 Pull 하거나 Fetch 하기”에서 이 명령을 설명하고 “리모트 브랜치”에 보면 참고할 수 있는 예제가 더 있다.
@@ -30,7 +33,8 @@ Ref를 한 개만 가져오는 방법은 “Pull Request의 Ref”에서 설명�
 
 Fetch 하는 기본 Refspec을 수정하는 방법은 “Refspec”에서 설명한다. 원하는 대로 수정할 수 있다.
 
-git pull
+* git pull
+
 git pull 명령은 git fetch와 git merge 명령을 순서대로 실행하는 것뿐이다. 그래서 해당 리모트에서 Fetch 하고 즉시 현 브랜치로 Merge를 시도한다.
 
 “리모트 저장소를 Pull 하거나 Fetch 하기”에서 이 명령을 사용하는 방법을 다뤘고 정확히 무엇을 Merge 하는 지는 “리모트 저장소 살펴보기”에서 설명한다.
@@ -41,7 +45,8 @@ git pull 명령은 git fetch와 git merge 명령을 순서대로 실행하는 �
 
 --verify-signatures 옵션을 주면 Pull 할 때 커밋의 PGP 서명을 검증한다. PGP 서명은 “커밋에 서명하기”에서 설명한다.
 
-git push
+* git push
+
 git push 명령은 리모트에는 없지만, 로컬에는 있는 커밋을 계산하고 나서 그 차이만큼만 Push 한다. Push를 하려면 원격 저장소에 대한 쓰기 권한이 필요하고 인증돼야 한다.
 
 ???에서 git push 명령으로 브랜치를 원격 저장소에 Push 하는 방법을 설명한다. 조금 깊게 브랜치를 하나씩 골라서 Push 하는 방법은 “Push 하기”에서 설명한다. 자동으로 Push 하도록 트래킹 브랜치를 설정하는 방법은 ???에서 설명한다. git push --delete 명령으로 원격 서버의 브랜치를 삭제하는 방법은 “리모트 브랜치 삭제”에서 설명한다.
@@ -56,7 +61,8 @@ git push 명령은 리모트에는 없지만, 로컬에는 있는 커밋을 계�
 
 일반적인 이름 규칙에 따라서 Push 하는 것이 아니라 Refspec을 사용해서 원하는 이름으로 Push 하는 것도 가능하다. 이것은 “Refspec Push 하기”에서 설명한다.
 
-git remote
+* git remote
+
 git remote 명령은 원격 저장소 설정인 리모트의 관리 도구다. 긴 URL 대신 “origin”처럼 이름을 짧게 지을 수 있다. 그리고 URL대신 짧은 리모트 이름을 사용한다. git remote 명령으로 이 리모트를 여러 개 만들어 관리할 수 있다.
 
 이 리모트를 조회하고 추가하고 삭제하고 수정하는 방법은 “리모트 저장소”에서 잘 설명한다.
@@ -68,9 +74,11 @@ git archive 명령은 프로젝트 스냅샷을 아카이브 파일로 만들어
 
 “릴리즈 준비하기”에서 설명하는데 프로젝트를 Tarball로 만들어 공유할 때 사용한다.
 
-git submodule
+* git submodule
+
 git submodule 명령은 저장소 안에서 다른 저장소를 관리하는 데 사용한다. 라이브러리나 특정 형식의 리소스 파일을 서브모듈로 사용할 수 있다. submodule 명령에 있는 add, update, sync 등의 하위 명령어로 서브모듈을 관리할 수 있다.
 
 이 명령은 “서브모듈”에서 설명한다.
 
-prev | next
+
+### 출처:[https://git-scm.com/book/ko/v2/Git의-기초-되돌리기]
