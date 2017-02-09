@@ -1,30 +1,26 @@
-# GIT Publish-related command
 ---
-tags: [getting_stard, troubleshooting]
-
-summary: aa
-
+title: Publish
+tags: [getting_started, troubleshooting]
+keywords:
+summary: "Writing git manual"
 sidebar: mydoc_sidebar
-
 permalink: mydoc_git_publish.html
-
-folder: mydoc 
-
-
-
+folder: mydoc
 ---
 
 
-Publish´Â º¯°æ ³»¿ëÀ» ¹ßÇàÇÏ´Â °ÍÀÔ´Ï´Ù.
-ÇöÀçÀÇ º¯°æ³»¿ëÀº ¾ÆÁ÷ ·ÎÄÃ ÀúÀå¼ÒÀÇ head ¾È¿¡ ÀÖ½À´Ï´Ù.
-ÀÌÁ¦ ÀÌ º¯°æ ³»¿ëÀ» ¿ø°İ ¼­¹ö·Î ¿Ã·Áº¾½Ã´Ù. 
+# GIT Publish-related command
 
-publishÀÇ ¸í·É¾î¿¡´Â ÀÌ·± °ÍµéÀÌ ÀÖ½À´Ï´Ù. 
 
- * [git push]()
- * [git push remote]()
- * [git format-patch origin]()
+PublishëŠ” ë³€ê²½ ë‚´ìš©ì„ ë°œí–‰í•˜ëŠ” ê²ƒì…ë‹ˆë‹¤.
+í˜„ì¬ì˜ ë³€ê²½ë‚´ìš©ì€ ì•„ì§ ë¡œì»¬ ì €ì¥ì†Œì˜ head ì•ˆì— ìˆìŠµë‹ˆë‹¤.
+ì´ì œ ì´ ë³€ê²½ ë‚´ìš©ì„ ì›ê²© ì„œë²„ë¡œ ì˜¬ë ¤ë´…ì‹œë‹¤. 
 
+publishì˜ ëª…ë ¹ì–´ì—ëŠ” ì´ëŸ° ê²ƒë“¤ì´ ìˆìŠµë‹ˆë‹¤. 
+
+* [git push]()
+* [git push remote]()
+* [git format-patch origin]()
 
 
 1. git push
@@ -39,4 +35,5 @@ $ git push remote
 3. git format-patch origin
 ```
 $ git format-patch origin
-```
+   ```
+

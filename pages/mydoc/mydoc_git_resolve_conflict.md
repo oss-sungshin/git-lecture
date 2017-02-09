@@ -8,24 +8,15 @@ permalink: mydoc_git_resolve_conflict.html
 folder: mydoc
 ---
 
-<<<<<<< HEAD
-## Writing git manual!
-Writing git manual!
-
-```javascript
+# Reslove Conflicts
+##### Use add to mark files as resolved.
+```
 git diff [--base]
 git diff --ours
 git diff --theirs
 git log --merge
 gitk --merge
 ```
-=======
-## Writing git manual!
-Writing git manual!
 
-abcd
-
- * foo
- * bar
- * baz
->>>>>>> 5e3a805d5fa95a10828ab5bd6983cac4e1702a0a
+ * git diff는 두 커밋간이나 HEAD와 워킹 디렉토리의 차이점을 보여주는 명령어이다.
+ * git diff 명령어를 사용하면 수정된 라인의 전, 후를 비교할 수 있다.
