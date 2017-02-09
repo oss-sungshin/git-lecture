@@ -9,6 +9,9 @@ folder: mydoc
 
 ## 문서구조
 
+기본 명령어 및 옵션에 대한 사용법을 예제와 함께 작성해주시면 됩니다.
+필요에 따라 검색을 하셔도 좋습니다.
+
 [1. Create](./mydoc_git_create.md): 실제 수정해야할 파일: $(GIT_LECTURE)/pages/mydoc/mydoc_git_create.md
 
 [2. Browse](./mydoc_git_browse.md): 실제 수정해야할 파일: $(GIT_LECTURE)/pages/mydoc/mydoc_git_browse.md
