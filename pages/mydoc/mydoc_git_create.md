@@ -8,6 +8,7 @@ permalink: mydoc_git_create.html
 folder: mydoc
 ---
 
+
 ## Create
 ```
 From existing files
@@ -19,6 +20,7 @@ From remote repository
    git clone git://...
    git clone ssh://...
 ```
+
 ## Writing git manual! 
 Writing git manual! 
 
