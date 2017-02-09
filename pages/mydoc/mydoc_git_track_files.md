@@ -8,8 +8,6 @@ permalink: mydoc_git_track_files.html
 folder: mydoc
 ---
 
-# track-related 명령어
-
 ![IMG1](images/img.JPG)
 
 * 작업폴더의 파일을 깃이 추적하게 하거나 커밋을 위한 준비상태로 만드는 명령어
