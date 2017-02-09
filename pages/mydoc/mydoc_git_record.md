@@ -2,7 +2,11 @@
 title: Record
 tags: [getting_started, troubleshooting]
 keywords:
+<<<<<<< HEAD
+summary: "git record-related command"
+=======
 summary: "Git record-related command"
+>>>>>>> 30fed7edd625cb4639f71c0345d7b8cdcd99686c
 sidebar: mydoc_sidebar
 permalink: mydoc_git_record.html
 folder: mydoc
