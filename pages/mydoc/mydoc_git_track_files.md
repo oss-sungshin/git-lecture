@@ -10,12 +10,12 @@ folder: mydoc
 
 # track-related 명령어
 
-![IMG1](./images/img1.JPG)
+![IMG1](images/img.JPG)
 
 * 작업폴더의 파일을 깃이 추적하게 하거나 커밋을 위한 준비상태로 만드는 명령어
 	* git add files
 	* git add .
-	* git add -i  // git 대화모드로 파일 staging
+	* git add -i  (git 대화모드로 파일 staging)
 
 * 파일명 수정
 	* git mv old_name new_name
