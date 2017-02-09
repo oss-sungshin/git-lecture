@@ -15,9 +15,6 @@ Writing git manual!
 
 ! [Update](C:\Users\IT333-8-PC\git-lecture\images\update.jpeg)
 
-![git](./images/update.png)
-
-
 ## 공유하고 업데이트하기
 
 Git에는 네트워크가 필요한 명령어가 많지 않다. 거의 로컬 데이터베이스만으로 동작한다. 코드를 공유하거나 가져올 때 필요한 명령어가 몇 개 있다. 이런 명령어는 모두 리모트 저장소를 다루는 명령어다.
