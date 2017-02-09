@@ -22,12 +22,6 @@ From remote repository
    git clone git://...
    git clone ssh://...
 ```
-<<<<<<< HEAD
-=======
-
-## Writing git manual! 
-Writing git manual! 
->>>>>>> 30fed7edd625cb4639f71c0345d7b8cdcd99686c
 
 
  * git init
