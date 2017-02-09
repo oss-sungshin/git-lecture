@@ -8,179 +8,76 @@ permalink: mydoc_git_revert.html
 folder: mydoc
 ---
 
-![git](./images/git_mark.png)
 
-# git revert
+# 되돌리기
+
+## 1. add를 잘못한 경우
+
+stage 영역에 추가하고 싶지 않은 파일을 잘못 추가했다면 git reset을 이용한다.
+```
+$ git reset 파일이름
+```
+
+## 2. commit을 잘못한 경우
+다시 커밋하고 싶으면 --amend 옵션을 사용한다.
+
+```
+$ git commit --amend
+```
+
+이는 이전 commit을 현재 stage영역의 상태로 덮어쓴다. 따라서 방금 한 commit을 다시 하고 싶으면, 파일을 수정한 뒤 add로 stage에 올리고 commit --amend를 해주면 된다.
+
+amend 외에도 revert 명령어를 이용할 수 있다.
+
+```
+$ git revert HEAD
+```
+
+![Image of revert](http://img1.daumcdn.net/thumb/R1920x0/?fname=http%3A%2F%2Fcfile7.uf.tistory.com%2Fimage%2F2416ED455802179106E51A)
+
+commit --amend와 다른점은 revert는 commit을 삭제한 이력을 다른 commit으로 남긴다는 점이다.	
+이미 push를 했다면 amend나 reset을 사용하기 어렵기 때문에 revert를 해야할 수 밖에 없는 상황도 있다. 만약 하나 이상의 commit을 revert하고 싶다면 merge하는 것과 비슷하게 conflict를 해결해줘야한다. 
+
+## 3. commit을 많이 잘못했다 or 수정을 하기 전으로 되돌리고 싶다.
+
+어디서부터 잘못했는지 모르겠다. 적어도 내가 아는데부터 다시 시작하고 싶다. 또는 수정사항을 만들기 전으로 복원시키고 싶다.
+이 경우에는 git reset의 다른 형태를 사용하면 된다.
+
+```
+$ git reset [option] commitId
+```
+
+reset은 사용자의 저장소와 작업 디렉토리를 특정 시점 상태로 변경한다.	
+메카니즘을 들여다보면 HEAD 참조를 지정된 commit 시점으로 변경한 후, 인덱스를 변경하여 해당 commit을 반영한다.	
+옵션에 따라 HEAD, 인덱스 뿐만아니라 작업 디렉토리 내의 모든 파일이 변경될 수 있기때문에 반드시 주의하여 사용하여야 한다.
+
+##### 주요 옵션
+
+ * --soft
+
+	git reset --soft [commit id]
+--soft 옵션은 지정된 commit을 가리키도록 HEAD 참조를 변경한다. 인덱스와 작업 디렉토리의 내용은 그대로 유지된다.
+이 옵션은 새 커밋을 가리키도록 심볼릭 참조의 상태만을 변경한다.
+
+ * --mixed
  
- ## 되돌리기
- 
- 
- 일을 하다보면 모든 단계에서 어떤 것은 되돌리고(Undo) 싶을 때가 있다. 이번에는 우리가 한 일을 되돌리는 방법을 살펴본다. 한 번 되돌리면 복구할 수 없기에 주의해야 한다. Git을 사용하면 우리가 저지른 실수는 대부분 복구할 수 있지만 되돌린 것은 복구할 수 없다.
+	git reset --mixed [commit id]
+--mixed 옵션은 지정된 commit을 가리키도록 HEAD를 변경한다. 따라서 commit에 맞게 인덱스의 내용도 변경된다.
+reset의 기본옵션이다.
 
-종종 완료한 커밋을 수정해야 할 때가 있다. 너무 일찍 커밋했거나 어떤 파일을 빼먹었을 때 그리고 커밋 메시지를 잘못 적었을 때 한다. 다시 커밋하고 싶으면 --amend 옵션을 사용한다.
+ * --hard
 
-$ git commit --amend
-이 명령은 Staging Area를 사용하여 커밋한다. 만약 마지막으로 커밋하고 나서 수정한 것이 없다면(커밋하자마자 바로 이 명령을 실행하는 경우) 조금 전에 한 커밋과 모든 것이 같다. 이때는 커밋 메시지만 수정한다.
+	git reset --hard [commit id]
+--hard 옵션은 HEAD, 인덱스 뿐만아니라 작업 디렉토리까지 commit과 같은 상태로 변경한다.
+굉장히 위험한 옵션이니 사용시 주의가 필요하다.
 
-편집기가 실행되면 이전 커밋 메시지가 자동으로 포함된다. 메시지를 수정하지 않고 그대로 커밋해도 기존의 커밋을 덮어쓴다.
 
-커밋을 했는데 Stage 하는 것을 깜빡하고 빠트린 파일이 있으면 아래와 같이 고칠 수 있다.
+따라서 다 지우고 다시 시작하고 싶은 때는 hard를 옵션으로 주면 된다. 이를 이용해 잘못 수정한 파일들을 HEAD 상태로 다시 복원할 수 있다.
 
-~~~
-$ git commit -m 'initial commit'
-$ git add forgotten_file
-$ git commit --amend
-~~~
-여기서 실행한 명령어 3개는 모두 커밋 한 개로 기록된다. 두 번째 커밋은 첫 번째 커밋을 덮어쓴다.
+```
+$ git reset --hard HEAD
+```
 
-파일 상태를 Unstage로 변경하기
-다음은 Staging Area와 워킹 디렉토리 사이를 넘나드는 방법을 설명한다. 두 영역의 상태를 확인할 때마다 변경된 상태를 되돌리는 방법을 알려주기 때문에 매우 편리하다. 예를 들어 파일을 두 개 수정하고서 따로따로 커밋하려고 했지만, 실수로 git add * 라고 실행해 버렸다. 두 파일 모두 Staging Area에 들어 있다. 이제 둘 중 하나를 어떻게 꺼낼까? 우선 git status 명령으로 확인해보자.
-~~~
-$ git add *
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
+출처: http://llnntms.tistory.com/5 [IGNITER]
+출처: http://donggov.tistory.com/29 [동고랩]
 
-    renamed:    README.md -> README
-    modified:   CONTRIBUTING.md
-~~~    
-Changes to be commited 밑에 git reset HEAD <file>... 메시지가 보인다. 이 명령으로 Unstaged 상태로 변경할 수 있다. CONTRIBUTING.md 파일을 Unstaged 상태로 변경해보자.
-~~~
-$ git reset HEAD CONTRIBUTING.md
-Unstaged changes after reset:
-M	CONTRIBUTING.md
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-    renamed:    README.md -> README
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-    modified:   CONTRIBUTING.md
-~~~
-명령어가 낮설게 느껴질 수도 있지만 잘 동작한다. CONTRIBUTING.md 파일은 Unstaged 상태가 됐다.
-
-Note
-git reset 명령을 --hard 옵션과 함께 사용하면 워킹 디렉토리의 파일까지 수정돼서 조심해야 한다. --hard 옵션만 사용하지 않는다면 git reset 명령은 Staging Area의 파일만 조작하기 때문에 위
-~~험하지 않다.
-
-지금까지 살펴본 내용이 git reset 명령에 대해 알아야 할 대부분의 내용이다. reset 명령이 정확히는 어떻게 동작하는지, 어떻게 전문적으로 활용하는지는 Reset 명확히 알고 가기 부분에서 자세히 살펴보기로 한다.
-
-Modified 파일 되돌리기
-어떻게 해야 CONTRIBUTING.md 파일을 수정하고 나서 다시 되돌릴 수 있을까? 그러니까 최근 커밋된 버전으로(아니면 처음 Clone 했을 때처럼 워킹 디렉토리에 처음 Checkout 한 그 내용으로) 되돌리는 방법이 무얼까? git status 명령이 친절하게 알려준다. 바로 위에 있는 예제에서 Unstaged 부분을 보자.
-~~~
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-    modified:   CONTRIBUTING.md
-~~~    
-위의 메시지는 수정한 파일을 되돌리는 방법을 꽤 정확하게 알려준다. 알려주는 대로 한 번 해보자.
-
-~~~
-$ git checkout -- CONTRIBUTING.md
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-    renamed:    README.md -> README
-~~~    
-정상적으로 복원된 것을 알 수 있다.
-
-Important
-git checkout -- [file] 명령은 꽤 위험한 명령이라는 것을 알아야 한다. 원래 파일로 덮어썼기 때문에 수정한 내용은 전부 사라진다. 수정한 내용이 진짜 마음에 들지 않을 때만 사용하자.
-
-변경한 내용을 쉽게 버릴수는 없고 하지만 당장은 되돌려야만 하는 상황이라면 Stash와 Branch를 사용하자. Git 브랜치 에서 다루는 이 방법들이 훨씬 낫다.
-
-Git으로 커밋한 모든 것은 언제나 복구할 수 있다. 삭제한 브랜치에 있었던 것도, --amend 옵션으로 다시 커밋한 것도 복구할 수 있다(자세한 것은 데이터 복구 에서 다룬다). 하지만 커밋하지 않고 잃어버린 것은 절대로 되돌릴 수 없다.   복구할 수 없기에 주의해야 한다. Git을 사용하면 우리가 저지른 실수는 대부분 복구할 수 있지만 되돌린 것은 복구할 수 없다.
-
-종종 완료한 커밋을 수정해야 할 때가 있다. 너무 일찍 커밋했거나 어떤 파일을 빼먹었을 때 그리고 커밋 메시지를 잘못 적었을 때 한다. 다시 커밋하고 싶으면 --amend 옵션을 사용한다.
-~~~
-$ git commit --amend
-~~~
-이 명령은 Staging Area를 사용하여 커밋한다. 만약 마지막으로 커밋하고 나서 수정한 것이 없다면(커밋하자마자 바로 이 명령을 실행하는 경우) 조금 전에 한 커밋과 모든 것이 같다. 이때는 커밋 메시지만 수정한다.
-
-편집기가 실행되면 이전 커밋 메시지가 자동으로 포함된다. 메시지를 수정하지 않고 그대로 커밋해도 기존의 커밋을 덮어쓴다.
-
-커밋을 했는데 Stage 하는 것을 깜빡하고 빠트린 파일이 있으면 아래와 같이 고칠 수 있다.
-
-~~~
-$ git commit -m 'initial commit'
-$ git add forgotten_file
-$ git commit --amend
-~~~
-여기서 실행한 명령어 3개는 모두 커밋 한 개로 기록된다. 두 번째 커밋은 첫 번째 커밋을 덮어쓴다.
-
-파일 상태를 Unstage로 변경하기
-다음은 Staging Area와 워킹 디렉토리 사이를 넘나드는 방법을 설명한다. 두 영역의 상태를 확인할 때마다 변경된 상태를 되돌리는 방법을 알려주기 때문에 매우 편리하다. 예를 들어 파일을 두 개 수정하고서 따로따로 커밋하려고 했지만, 실수로 git add * 라고 실행해 버렸다. 두 파일 모두 Staging Area에 들어 있다. 이제 둘 중 하나를 어떻게 꺼낼까? 우선 git status 명령으로 확인해보자.
-~~~
-$ git add *
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-    renamed:    README.md -> README
-    modified:   CONTRIBUTING.md
-Changes to be commited 밑에 git reset HEAD <file>... 
-~~~
-메시지가 보인다. 이 명령으로 Unstaged 상태로 변경할 수 있다. CONTRIBUTING.md 파일을 Unstaged 상태로 변경해보자.
-~~~
-$ git reset HEAD CONTRIBUTING.md
-Unstaged changes after reset:
-M	CONTRIBUTING.md
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-    renamed:    README.md -> README
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-    modified:   CONTRIBUTING.md
-~~~    
-명령어가 낮설게 느껴질 수도 있지만 잘 동작한다. CONTRIBUTING.md 파일은 Unstaged 상태가 됐다.
-
-Note
-git reset 명령을 --hard 옵션과 함께 사용하면 워킹 디렉토리의 파일까지 수정돼서 조심해야 한다. --hard 옵션만 사용하지 않는다면 git reset 명령은 Staging Area의 파일만 조작하기 때문에 위험하지 않다.
-
-지금까지 살펴본 내용이 git reset 명령에 대해 알아야 할 대부분의 내용이다. reset 명령이 정확히는 어떻게 동작하는지, 어떻게 전문적으로 활용하는지는 Reset 명확히 알고 가기 부분에서 자세히 살펴보기로 한다.
-
-Modified 파일 되돌리기
-어떻게 해야 CONTRIBUTING.md 파일을 수정하고 나서 다시 되돌릴 수 있을까? 그러니까 최근 커밋된 버전으로(아니면 처음 Clone 했을 때처럼 워킹 디렉토리에 처음 Checkout 한 그 내용으로) 되돌리는 방법이 무얼까? git status 명령이 친절하게 알려준다. 바로 위에 있는 예제에서 Unstaged 부분을 보자.
-~~~
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-    modified:   CONTRIBUTING.md
-~~~    
-위의 메시지는 수정한 파일을 되돌리는 방법을 꽤 정확하게 알려준다. 알려주는 대로 한 번 해보자.
-~~~
-$ git checkout -- CONTRIBUTING.md
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-    renamed:    README.md -> README
-~~~    
-정상적으로 복원된 것을 알 수 있다.
-
-### Important
-git checkout -- [file] 명령은 꽤 위험한 명령이라는 것을 알아야 한다. 원래 파일로 덮어썼기 때문에 수정한 내용은 전부 사라진다. 수정한 내용이 진짜 마음에 들지 않을 때만 사용하자.
-
-변경한 내용을 쉽게 버릴수는 없고 하지만 당장은 되돌려야만 하는 상황이라면 Stash와 Branch를 사용하자. Git 브랜치 에서 다루는 이 방법들이 훨씬 낫다.
-
-Git으로 커밋한 모든 것은 언제나 복구할 수 있다. 삭제한 브랜치에 있었던 것도, --amend 옵션으로 다시 커밋한 것도 복구할 수 있다(자세한 것은 데이터 복구 에서 다룬다). 하지만 커밋하지 않고 잃어버린 것은 절대로 되돌릴 수 없다.  
-
-### 출처:[https://git-scm.com/book/ko/v2/Git의-기초-되돌리기]
