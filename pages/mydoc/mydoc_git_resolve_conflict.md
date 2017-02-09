@@ -198,7 +198,7 @@ index 36c06c8,e85207e..0000000
   end
 
   hello()
-  ```
+```
   
   
   
@@ -698,7 +698,11 @@ diff 명령으로 rack 하위 디렉토리와 rack_branch의 차이를 볼 때�
 
 ```
 $ git diff-tree -p rack_branch
-```혹은 rack 하위 디렉토리가 Rack 프로젝트의 리모트 저장소의 master 브랜치와 어떤 차이가 있는지 살펴보고 싶을 수도 있다. 마지막으로 Fetch 한 리모트의 master 브랜치와 비교하려면 아래와 같은 명령을 사용한다.
+```
+
+혹은 rack 하위 디렉토리가 Rack 프로젝트의 리모트 저장소의 master 브랜치와 어떤 차이가 있는지 살펴보고 싶을 수도 있다. 마지막으로 Fetch 한 리모트의 master 브랜치와 비교하려면 아래와 같은 명령을 사용한다.
+
+
 ```
 $ git diff-tree -p rack_remote/master
 ```
