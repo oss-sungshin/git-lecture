@@ -13,5 +13,5 @@ team 빌딩 결과
 
 팀명 | 조원이름 
 ------------ | -------------
-A | name, name, name, name and name
+A |김경민, name, name, name and name
 B | name, name, name, name and name
