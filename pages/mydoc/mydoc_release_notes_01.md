@@ -11,3 +11,5 @@ folder: mydoc
 
 ## Relative links
 
+test
+
