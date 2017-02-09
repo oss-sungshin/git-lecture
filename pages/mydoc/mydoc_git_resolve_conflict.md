@@ -10,6 +10,7 @@ folder: mydoc
 
 # Reslove Conflicts
 ### Use add to mark files as resolved.
+
 예시는 아래와 같다.
 
 ```
