@@ -19,6 +19,7 @@ From remote repository
    git clone git://...
    git clone ssh://...
 ```
+<<<<<<< HEAD
 
  * git init
 
@@ -50,3 +51,8 @@ Git은 생성하거나 수정하고 나서 git add 명령으로 추가하지 않
 github에서 소스를 최초로 내려받을때, git clone명령어를 사용하면 된다.
 
 이는 저장소를 복제한다는 뜻이다.
+=======
+## Writing git manual! 
+Writing git manual! 
+
+>>>>>>> 2219f7af7baef33ff835470a7bb626433ed86728
