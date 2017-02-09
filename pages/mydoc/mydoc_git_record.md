@@ -21,3 +21,13 @@ git tag foo
   * git commit -a 옵션을 이용하면 바뀐 파일을 자동으로 추가할 수 있다.
 * git push 명령으로 Github에 밀어 넣는다.
 * git tag 명령으로 이미 만들어진 태그가 있는지 확인할 수 있다. 알파벳 순서로 태그를 보여준다.
+
+Git 상태확인 명령어
+
+```
+git show
+git log
+git shortlog
+git diff
+git status
+```
