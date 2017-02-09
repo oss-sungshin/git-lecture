@@ -29,7 +29,7 @@ gitk --merge
  * git diff는 두 커밋간이나 HEAD와 워킹 디렉토리의 차이점을 보여주는 명령어이다.
  * git diff 명령어를 사용하면 수정된 라인의 전, 후를 비교할 수 있다.
  * git diff 명령어는 수정사항이 있을 때 많이 사용한다.
- * git diff "HEAD...원하는커밋아이디"를 써주면 처음부터 커밋아이디까지의 변경사항을 볼 수 있다.
+ * git diff + HEAD...원하는커밋아이디 를 써주면 처음부터 커밋아이디까지의 변경사항을 볼 수 있다.
  * gitk를 사용하면 지금까지 작업의 히스토리가 보여진다.
 
 gitk 화면 예시
@@ -227,9 +227,9 @@ index 36c06c8,e85207e..0000000
 
   hello()
 ```
-  
-  
-  
+
+
+
 이렇게 해서 멋지게 Merge가 완료된 파일을 얻었다. 사실 이것이 ignore-all-space 옵션을 사용하는 것보다 더 나은 방법이다. 왜냐면 공백을 무시하지 않고 실제로 고쳤기 때문이다. ignore-all-space 옵션을 사용한 Merge 에서는 여전히 DOS의 개행 문자가 남아서 한 파일에 두 형식의 개행문자가 뒤섞인다.
 
 Merge 커밋을 완료하기 전에 양쪽 부모에 대해서 무엇이 바뀌었는지 확인하려면 git diff를 사용한다. 이 명령을 이용하면 Merge 의 결과로 워킹 디렉토리에 무엇이 바뀌었는지 알 수 있다. 한번 자세히 살펴보자.
@@ -617,7 +617,7 @@ Merge made by the 'recursive' strategy.
  create mode 100644 test.sh
 ```
 
- 
+
 한쪽 파일에는 "hello mundo"가 있고 다른 파일에는 "hola world"가 있다. 이 Merge에서 충돌 표시를 하는 대신 간단히 "hola world"를 선택한다. 충돌 나지 않은 나머지는 잘 Merge 된다.
 
 이 옵션은 git merge-file 명령에도 사용할 수 있다. 앞에서 이미 git merge-file --ours 같이 실행해서 파일을 따로따로 Merge 했다.
@@ -726,4 +726,3 @@ $ git diff-tree -p rack_branch
 ```
 $ git diff-tree -p rack_remote/master
 ```
-
