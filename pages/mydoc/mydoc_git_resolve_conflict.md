@@ -1,3 +1,12 @@
+---
+title: git update-related command
+tags: [getting_started, troubleshooting]
+keywords:
+summary: "Writing git manual"
+sidebar: mydoc_sidebar
+permalink: mydoc_git_update.html
+folder: mydoc
+---
 
 ### 고급 Merge
 Git의 Merge은 진짜 가볍다. Git에서는 브랜치끼리 몇 번이고 Merge 하기가 쉽다. 오랫동안 합치지 않은 두 브랜치를 한 번에 Merge 하면 거대한 충돌이 발생한다. 조그마한 충돌을 자주 겪고 그걸 풀어나감으로써 브랜치를 최신으로 유지한다.
