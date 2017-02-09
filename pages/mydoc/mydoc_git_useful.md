@@ -42,7 +42,7 @@ Commit changes made to all tracked files since the last commit, optionally using
 * git commit --amend file1 file2 ... [-m msg]
 Re-commit previous commit, including file1, file2, etc., using previous commit message or, optionally, a new one given by msg.
  
- ##Sharing
+## Sharing
 
 * git push [remote]
 Update the remote repository named remote with commits across all branches that are common between your local repository and remote. If remote is not specified, but a remote named “origin” is defined, then remote defaults to “origin”. Local branches that were never pushed to the server in the first place are not shared.
@@ -114,7 +114,7 @@ Show the changeset (diff) of a commit specified by rev.
 * git show rev -- path(s)
 Show the changeset (diff) of a commit rev , optionally limited to files found in one or more space-separated file paths or subdirectories given by path(s).
 
-#Searching
+# Searching
 
 ## Searching for Content
 
@@ -293,3 +293,5 @@ Full name to be recorded in any newly created commits. Overrides user.name in .g
 GIT_AUTHOR_EMAIL, GIT_COMMITTER_EMAIL
 Email address to be recorded in any newly created commits. Overrides user.email in .git/config.
 No related posts.
+
+## 출처:[http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands]
