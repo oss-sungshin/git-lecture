@@ -12,6 +12,7 @@ folder: mydoc
 Use add to mark files as resolved.
 
 예시는 아래와 같다.
+
 ```
 git diff [--base]
 
@@ -23,6 +24,7 @@ git log --merge
 
 gitk --merge
 ```
+
 
  * git diff는 두 커밋간이나 HEAD와 워킹 디렉토리의 차이점을 보여주는 명령어이다.
  * git diff 명령어를 사용하면 수정된 라인의 전, 후를 비교할 수 있다.
