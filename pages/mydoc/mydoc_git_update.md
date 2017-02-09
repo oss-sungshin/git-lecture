@@ -10,3 +10,10 @@ folder: mydoc
 
 ## Writing git manual! 
 Writing git manual! 
+
+
+# Update
+
+![Update] (C:\Users\IT333-8-PC\git-lecture\images\update.jpeg)
+
+
