@@ -9,17 +9,19 @@ folder: mydoc
 ---
 
 ## Create
+
 ```
 From existing files
    git init
    git add .
    git commit
+
 From remote repository
    git clone .../old .../new
    git clone git://...
    git clone ssh://...
 ```
-<<<<<<< HEAD
+
 
  * git init
 
