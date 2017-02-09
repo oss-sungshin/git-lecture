@@ -1,6 +1,6 @@
 ---
 title: git browse-related command
-tags: [getting_started, troubleshooting]
+tags: [git browse command]
 keywords:
 summary: "Writing git manual"
 sidebar: mydoc_sidebar
