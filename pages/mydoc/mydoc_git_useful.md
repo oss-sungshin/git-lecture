@@ -22,7 +22,7 @@ Create an new git repository in the current directory without an associated work
 * git update-server-info
 Allow a git repository to act as a dumb server (for remote access).
 
- ##Adding/Deleting
+## Adding/Deleting
 
 * git add file1 file2 ...
 Add file1, file2, etc. to the project.
@@ -33,7 +33,7 @@ Add all files under the current directory to the project, including subdirectori
 * git rm file1 file2 ...
 Remove file1, file2, etc. from the project (and the filesystem).
  
- ##Commiting
+## Commiting
 
 * git commit file1 file2 ... [-m msg]
 Commit changes in file1, file2, etc., optionally using commit message msg or otherwise opening editor for commit message entry.
@@ -113,9 +113,10 @@ List all commits between rev1 and rev2.
 Show the changeset (diff) of a commit specified by rev.
 * git show rev -- path(s)
 Show the changeset (diff) of a commit rev , optionally limited to files found in one or more space-separated file paths or subdirectories given by path(s).
-Searching
 
-##Searching for Content
+#Searching
+
+## Searching for Content
 
 * git grep regexp
 Search working tree for text matching regular expression regexp.
@@ -139,16 +140,16 @@ Search commit logs for lines of text matching regular expression regexp1 or rege
 * git log --grep regexp1 --and --grep regexp2
 Search commit logs for lines of text matching regular expression regexp1 and regexp2.
 
-## Branching
+# Branching
 
-##Listing Branches
+## Listing Branches
 
 * git branch
 List all local branches.
 * git branch -r
 List all local and remote branches.
  
- ##Creating Branches
+## Creating Branches
 
 * git branch new-branch
 Create a new branch named new-branch, based on current branch.
@@ -192,11 +193,12 @@ git merge branch --no-commit
 Merge branch branch into the current branch, but do not autocommit the result. Allows for inspection or tweaking of the merge result before committing.
 git merge branch --squash --commit
 Merge branch branch into the current branch as a single commit.
-Undoing
+
+# Undoing
 
 Reverting is different from resetting in that reverts usually create new history while resets usually remove existing history. The changes of a revert are applied to the current state of the repository, and, if committed, results in a new repository state descending from the current one. Reverts are safe to publish even if they revert a previously published commit, and, in fact, are the correct way of dealing with the undoing of published commits. Resetting, on the other hand, represents (a possibly selective) “rewind” to a previous state in the history “starting again” from there. Resets should never be committed if they undo commits that have been published or pushed to remote repositories, as this would result in invalid object histories and commit ID’s in the remote repositories.
 
-##Reverting
+## Reverting
 
 * git revert rev
 Revert the changes introduced by rev, and record a new commit that records it. This does not do the same thing as similarly named commands in other VCS’s such as “svn revert” or “bzr revert”.
@@ -208,7 +210,8 @@ git checkout rev path(s)
 Re-checkout file or files specified by path(s) to version specified by rev (which may be specified using a SHA1 commit ID, branch name, or tag), overwriting any local changes.
 git checkout -f
 Throw away all local changes since last commit, restoring working tree to last committed state (plus untracked files) and clearing index. Unlike “git reset –hard”, does not move HEAD, and so will not, for example, cleanly forget about a failed merged: use “git reset –hard” for this.
-Resetting
+
+# Resetting
 
 * git reset
 Resets the index (i.e., removes all changes staged for commit) but does not modify the working tree (i.e., the changes in the files are preserved), and does not change HEAD.
@@ -222,7 +225,8 @@ git reset --hard
 Throw away all local changes since last commit, restoring working tree to last committed state (plus untracked files) and resetting both index and HEAD.
 git reset --hard rev
 Sets the current HEAD to the commit specified by rev, and changes the working tree to mirror the new HEAD (plus untracked files). For example, “git reset –hard ORIG_HEAD” will undo the most recent successful merge and any changes that occurred after. Useful for forgetting about the merge just done. If there are conflicts (the merge was not successful), use “git reset –hard” instead.
-Stashing
+
+# Stashing
 
 Use “git stash” when you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit.
 
@@ -241,7 +245,7 @@ Remove a single stashed state from the stash list. When no stash is given, it re
 git stash branch new-branch [stash]
 Creates and checks out a new branch named new-branch starting from the commit at which the stash was originally created, applies the changes recorded in stash to the new working tree and index, then drops the stash if that completes successfully. When no stash is given, applies the latest one.
 
-##Cleaning
+## Cleaning
 
 * git clean -f
 Remove all untracked files from working copy.
