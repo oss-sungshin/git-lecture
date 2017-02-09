@@ -8,6 +8,29 @@ permalink: mydoc_git_branch.html
 folder: mydoc
 ---
 
+##Branch
+: 코드를 통째로 복사하고 나서 원래 코드와는 상관 없이 독립적으로 개발을 진행하는 것.
+
+```
+git checkout branch
+  [switch working dir to branch]
+```
+
+```
+git merge branch
+  [merge into current]
+```
+
+```
+git branch branch
+  [branch current]
+```
+
+```
+git checkout -b new other
+  [branch new from other and switch to it]
+```
+
 # 브랜치
 ### 브랜치란 커밋 사이를 가볍게 이동할 수 있는 어떤 포인터 같은 것이다.
 
@@ -39,3 +62,4 @@ $ git checkout testing
 ![Image of head](https://git-scm.com/figures/18333fig0306-tn.png)
 
 그림 3. HEAD는 옮겨간 다른 브랜치를 가리킨다.
+
