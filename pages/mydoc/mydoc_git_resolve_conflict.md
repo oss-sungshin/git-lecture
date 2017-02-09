@@ -1,6 +1,6 @@
 ---
 title: git resolve-related command
-tags: [getting_started, troubleshooting]
+tags: [getting_started, troubleshooting, gitdiff]
 keywords:
 summary: "Writing git manual"
 sidebar: mydoc_sidebar
@@ -9,9 +9,9 @@ folder: mydoc
 ---
 
 # Reslove Conflicts
-### Use add to mark files as resolved.
-예시는 아래와 같다.
+Use add to mark files as resolved.
 
+예시는 아래와 같다.
 ```
 git diff [--base]
 
