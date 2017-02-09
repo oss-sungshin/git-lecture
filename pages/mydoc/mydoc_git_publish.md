@@ -1,4 +1,3 @@
-
 ---
 title: Publish
 tags: [getting_started, troubleshooting]
@@ -10,7 +9,6 @@ folder: mydoc
 ---
 
 
-
 # GIT Publish-related command
 
 
@@ -20,11 +18,9 @@ Publish는 변경 내용을 발행하는 것입니다.
 
 publish의 명령어에는 이런 것들이 있습니다. 
 
-
- * [git push]()
- * [git push remote]()
- * [git format-patch origin]()
-
+* [git push]()
+* [git push remote]()
+* [git format-patch origin]()
 
 
 1. git push
@@ -39,4 +35,4 @@ $ git push remote
 3. git format-patch origin
 ```
 $ git format-patch origin
-```
+   ```
