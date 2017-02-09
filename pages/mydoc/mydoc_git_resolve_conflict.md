@@ -35,4 +35,4 @@ gitk --merge
 
  예시 화면입니다
 
- ![Image of a](a.JPG)
+ ![git](./images/a.JPG)
