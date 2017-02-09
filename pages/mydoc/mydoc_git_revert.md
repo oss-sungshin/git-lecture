@@ -8,7 +8,7 @@ permalink: mydoc_git_revert.html
 folder: mydoc
 ---
 
-![git](../../images/git_mark.JPG)
+![git](./images/git_mark.JPG)
 
 # git revert
  
