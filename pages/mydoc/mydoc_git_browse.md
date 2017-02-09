@@ -1,6 +1,6 @@
 ---
 title: git browse-related command
-tags: [getting_started, troubleshooting]
+tags: [git browse command]
 keywords:
 summary: "Writing git manual"
 sidebar: mydoc_sidebar
@@ -10,3 +10,11 @@ folder: mydoc
 
 ## Writing git manual! 
 Writing git manual! 
+
+
+# git browse 내용 쓰기
+
+* 리스트1
+	* 리스트1-1
+* 리스트2
+* 리스트3
