@@ -1,10 +1,9 @@
 
 ---
-  -title: git publish-related command
-  -tags: [getting_started, troubleshooting]
-  -keywords:
-  -summary: "Writing git manual"
-
+ -title: git publish-related command
+ -tags: [getting_started, troubleshooting]
+ -keywords:
+ -summary: "Writing git manual"
 ---
 
 
