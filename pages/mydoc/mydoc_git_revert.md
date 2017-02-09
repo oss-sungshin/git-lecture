@@ -14,6 +14,7 @@ folder: mydoc
 ## 1. add를 잘못한 경우
 
 stage 영역에 추가하고 싶지 않은 파일을 잘못 추가했다면 git reset을 이용한다.
+
 ```
 $ git reset 파일이름
 ```
