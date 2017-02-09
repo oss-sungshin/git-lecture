@@ -1,6 +1,6 @@
 ---
 title: git resolve-related command
-tags: [getting_started, troubleshooting, gitdiff]
+tags: [getting_started, troubleshooting]
 keywords:
 summary: "Writing git manual"
 sidebar: mydoc_sidebar
