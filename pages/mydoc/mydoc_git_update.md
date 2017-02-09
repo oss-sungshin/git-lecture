@@ -13,5 +13,5 @@ Writing git manual!
 
 # Update
 
-! [Update](C:\Users\IT333-8-PC\git-lecture\images\update.jpeg)
+! [Update](C:\Users\IT333-8-PC\git-lecture\images\update.jpg)
 
