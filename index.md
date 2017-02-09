@@ -9,9 +9,6 @@ summary: Web 페이지를 프로젝트화 하여 서로 협업하면서 작업�
 
 ![sungshin](./images/sungshin.png)
 
-## 강의 노트
-* [다운로드 클릭](https://github.com/oss-sungshin/git-lecture/raw/master/pdf/ci.pptx)
-
 ## 목표
 * Webpage 프로젝트를 서로 협업하면서 작업을 진행.
 * Markdown으로 구성된 페이지 수정 작업을 통해 git/github 사용법을 완벽 숙지한다. 

@@ -1,5 +1,5 @@
 ---
-title: git record-related command
+title: Record
 tags: [getting_started, troubleshooting]
 keywords:
 summary: "Writing git manual"
@@ -8,5 +8,11 @@ permalink: mydoc_git_record.html
 folder: mydoc
 ---
 
-## Writing git manual! 
-Writing git manual! 
+## git record-related command
+* In Git, commit only respects changes that have been marked explicitly with add.
+
+```
+git commit [-a]
+git push [romote]
+git tag foo
+```
