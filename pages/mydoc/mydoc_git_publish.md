@@ -1,10 +1,13 @@
 
-# GIT Publish-related command
+
 ---
- -title: git publish-related command
- -tags: [getting_started, troubleshooting]
- -keywords:
- -summary: "Writing git manual"
+title: Publish
+tags: [getting_started, troubleshooting]
+keywords:
+summary: "Writing git manual"
+sidebar: mydoc_sidebar
+permalink: mydoc_git_create.html
+folder: mydoc
 ---
 
 
