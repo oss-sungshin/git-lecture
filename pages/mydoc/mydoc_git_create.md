@@ -40,7 +40,7 @@ git add 명령으로 파일을 추가하고 커밋한다:
 
 
 Git은 생성하거나 수정하고 나서 git add 명령으로 추가하지 않은 파일은 커밋하지 않는다.
- 
+
 그 파일은 여전히 Modified 상태로 남아 있다.
 
 커밋하기 전에 git status 명령으로 모든 것이 Staged 상태인지 확인할 수 있다. 그리고 git commit을 실행하여 커밋한다:
@@ -51,8 +51,3 @@ Git은 생성하거나 수정하고 나서 git add 명령으로 추가하지 않
 github에서 소스를 최초로 내려받을때, git clone명령어를 사용하면 된다.
 
 이는 저장소를 복제한다는 뜻이다.
-=======
-## Writing git manual! 
-Writing git manual! 
-
->>>>>>> 2219f7af7baef33ff835470a7bb626433ed86728
