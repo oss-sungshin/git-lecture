@@ -14,4 +14,4 @@ team 빌딩 결과
 팀명 | 조원이름 
 ------------ | -------------
 A |김경민, name, name, name and name
-B | name, name, name, name and name
+B |이정희, 이한나, 유조영, name and name

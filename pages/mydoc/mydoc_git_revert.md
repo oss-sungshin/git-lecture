@@ -8,6 +8,7 @@ permalink: mydoc_git_revert.html
 folder: mydoc
 ---
 
+
 # 되돌리기
 
 ## 1. add를 잘못한 경우
@@ -79,3 +80,4 @@ $ git reset --hard HEAD
 
 출처: http://llnntms.tistory.com/5 [IGNITER]
 출처: http://donggov.tistory.com/29 [동고랩]
+
