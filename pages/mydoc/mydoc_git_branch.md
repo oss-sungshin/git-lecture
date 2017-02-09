@@ -1,4 +1,4 @@
----
+﻿---
 title: git branch-related command
 tags: [git branch command]
 keywords:
@@ -39,3 +39,4 @@ $ git checkout testing
 ![Image of head](https://git-scm.com/figures/18333fig0306-tn.png)
 
 그림 3. HEAD는 옮겨간 다른 브랜치를 가리킨다.
+
