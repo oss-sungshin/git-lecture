@@ -8,34 +8,6 @@ permalink: mydoc_git_resolve_conflict.html
 folder: mydoc
 ---
 
-# Reslove Conflicts
-Use add to mark files as resolved.
-
-예시는 아래와 같다.
-
-```
-git diff [--base]
-
-git diff --ours
-
-git diff --theirs
-
-git log --merge
-
-gitk --merge
-```
-
-
- * git diff는 두 커밋간이나 HEAD와 워킹 디렉토리의 차이점을 보여주는 명령어이다.
- * git diff 명령어를 사용하면 수정된 라인의 전, 후를 비교할 수 있다.
- * git diff 명령어는 수정사항이 있을 때 많이 사용한다.
- * git diff "HEAD...원하는커밋아이디"를 써주면 처음부터 커밋아이디까지의 변경사항을 볼 수 있다.
- * gitk를 사용하면 지금까지 작업의 히스토리가 보여진다.
-
-gitk 화면 예시
-
- ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-=======
 ### 고급 Merge
 Git의 Merge은 진짜 가볍다. Git에서는 브랜치끼리 몇 번이고 Merge 하기가 쉽다. 오랫동안 합치지 않은 두 브랜치를 한 번에 Merge 하면 거대한 충돌이 발생한다. 조그마한 충돌을 자주 겪고 그걸 풀어나감으로써 브랜치를 최신으로 유지한다.
 
@@ -349,7 +321,11 @@ Automatic merge failed; fix conflicts and then commit the result.
 #! /usr/bin/env ruby
 
 def hello
+<<<<<<< HEAD
+  puts 'hola world'
+=======
   puts 'hello mundo'
+>>>>>>> mundo
 end
 
 hello()
@@ -377,10 +353,14 @@ $ git checkout --conflict=diff3 hello.rb
 #! /usr/bin/env ruby
 
 def hello
-
+<<<<<<< ours
   puts 'hola world'
 ||||||| base
   puts 'hello world'
+=======
+  puts 'hello mundo'
+>>>>>>> theirs
+end
 
 hello()
 ```
@@ -454,7 +434,7 @@ index 0399cd5,59727f0..0000000
 ```
 
 
-이런 형식을 “Combined Diff'라고 한다. 각 라인은 두 개의 컬럼으로 구분할 수 있다. 첫 번째 컬럼은 ``ours” 브랜치와 워킹 디렉토리의 차이(추가 또는 삭제)를 보여준다. 두 번째 컬럼은 ``theirs'와 워킹 디렉토리사이의 차이를 나타낸다.
+이런 형식을 “Combined Diff'라고 한다. 각 라인은 두 개의 컬럼으로 구분할 수 있다. 첫 번째 컬럼은 "ours” 브랜치와 워킹 디렉토리의 차이(추가 또는 삭제)를 보여준다. 두 번째 컬럼은 ``theirs'와 워킹 디렉토리사이의 차이를 나타낸다.
 
 이 예제에서 <<<<<<<와 >>>>>>> 충돌 마커 표시는 어떤 쪽에도 존재하지 않고 추가된 코드라는 것을 알 수 있다. 이 표시는 Merge 도구가 만들어낸 코드이기 때문이다. 물론 이 표시는 지워야 하는 라인이다.
 
@@ -521,14 +501,12 @@ index 0399cd5,59727f0..e1d0799
 Merge 커밋도 예외는 아니다. 토픽 브랜치에서 일을 하다가 master로 잘못 Merge 했다고 생각해보자. 커밋 히스토리는 아래와 같다.
 
 우발적인 Merge 커밋.
-Figure 138. 우발적인 Merge 커밋.
 접근 방식은 원하는 결과에 따라 두 가지로 나눌 수 있다.
 
 #### Refs 수정
 실수로 생긴 Merge 커밋이 로컬 저장소에만 있을 때는 브랜치를 원하는 커밋을 가리키도록 옮기는 것이 쉽고 빠르다. 잘못 Merge 하고 나서 git reset --hard HEAD~ 명령으로 브랜치를 되돌리면 된다.
 
 git reset --hard HEAD~ 실행 후의 히스토리.
-Figure 139. git reset --hard HEAD~ 실행 후의 히스토리.
 reset에 대해서는 이미 앞의 <<_git_reset>>에서 다뤘었기 때문에 이 내용이 그리 어렵진 않을 것이다. 간단하게 복습해보자. reset --hard 명령은 아래의 세 단계로 수행한다.
 
 1. HEAD의 브랜치를 지정한 위치로 옮긴다. 이 경우엔 master 브랜치를 Merge 커밋(C6) 이전으로 되돌린다.
@@ -567,7 +545,6 @@ Already up-to-date.
 이미 Merge 했던 topic 브랜치에는 더는 master 브랜치로 Merge 할 내용이 없다. 상황을 더 혼란스럽게 하는 경우는 topic에서 뭔가 더 일을 하고 다시 Merge를 하는 경우이다. Git은 Merge 이후에 새로 만들어진 커밋만 가져온다.
 
 좋지 않은 Merge가 있는 히스토리.
-Figure 141. 좋지 않은 Merge가 있는 히스토리
 이러면 가장 좋은 방법은 되돌렸던 Merge 커밋을 다시 되돌리는 것이다. 이후에 추가한 내용을 새 Merge 커밋으로 만드는 게 좋다.
 
 
@@ -579,7 +556,6 @@ $ git merge topic
 
 
 되돌린 Merge를 다시 Merge 한 후의 히스토리.
-Figure 142. 되돌린 Merge를 다시 Merge 한 후의 히스토리
 위 예제에서는 M과 ^M이 상쇄됐다. ^^M는 C3와 C4의 변경 사항을 담고 있고 C8은 C7의 내용을 훌륭하게 Merge 했다. 이리하여 현재 topic 브랜치를 완전히 Merge 한 상태가 됐다.
 
 #### 다른 방식의 Merge
@@ -727,3 +703,4 @@ $ git diff-tree -p rack_branch
 $ git diff-tree -p rack_remote/master
 ```
 
+#### 출처 : https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EA%B3%A0%EA%B8%89-Merge
