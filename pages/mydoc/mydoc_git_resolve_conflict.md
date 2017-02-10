@@ -321,11 +321,8 @@ Automatic merge failed; fix conflicts and then commit the result.
 #! /usr/bin/env ruby
 
 def hello
-<<<<<<< HEAD
   puts 'hola world'
-=======
   puts 'hello mundo'
->>>>>>> mundo
 end
 
 hello()
@@ -353,13 +350,11 @@ $ git checkout --conflict=diff3 hello.rb
 #! /usr/bin/env ruby
 
 def hello
-<<<<<<< ours
   puts 'hola world'
 ||||||| base
   puts 'hello world'
-=======
+
   puts 'hello mundo'
->>>>>>> theirs
 end
 
 hello()
@@ -661,7 +656,7 @@ README
 Rack 프로젝트를 master 브랜치의 하위 디렉토리로 만들 수 있다. 이는 git read-tree 명령을 사용한다. read-tree 명령과 같이 저수준 명령에 관련된 많은 내용은 Git의 내부에서 다룬다. 간단히 말하자면 read-tree 명령은 어떤 브랜치로부터 루트 트리를 읽어서 현재 Staging Area나 워킹 디렉토리로 가져온다. master 브랜치로 다시 Checkout 하고 rack_branch 브랜치를 rack이라는 master 브랜치의 하위 디렉토리로 만들어보자.
 
 
-```
+``
 $ git read-tree --prefix=rack/ -u rack_branch
 ```
 
@@ -704,3 +699,31 @@ $ git diff-tree -p rack_remote/master
 ```
 
 #### 출처 : https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EA%B3%A0%EA%B8%89-Merge
+# Reslove Conflicts
+Use add to mark files as resolved.
+
+예시는 아래와 같다.
+
+```
+git diff [--base]
+
+git diff --ours
+
+git diff --theirs
+
+git log --merge
+
+gitk --merge
+```
+
+
+ * git diff는 두 커밋간이나 HEAD와 워킹 디렉토리의 차이점을 보여주는 명령어이다.
+ * git diff 명령어를 사용하면 수정된 라인의 전, 후를 비교할 수 있다.
+ * git diff 명령어는 수정사항이 있을 때 많이 사용한다.
+ * git diff HEAD...원하는커밋아이디 를 써주면 처음부터 커밋아이디까지의 변경사항을 볼 수 있다.
+ * gitk를 사용하면 지금까지 작업의 히스토리가 보여진다.
+
+
+ 예시 화면입니다
+
+ ![git](./images/a.JPG)
